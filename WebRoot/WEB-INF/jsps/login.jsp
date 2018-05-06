@@ -6,7 +6,7 @@
 <HTML>
 <HEAD>
 
-<TITLE>用户登录</TITLE>
+<TITLE>Struts2用户登录</TITLE>
 <script type="text/javascript">
 	if (self != top) {
 		top.location = self.location;
