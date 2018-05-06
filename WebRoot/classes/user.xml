@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" 
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="default" namespace="/" extends="struts-default">
+
+		<!-- <default-action-ref name="index"></default-action-ref> -->
+
+		<!-- <action name="index"> <result >/error.jsp</result> </action> -->
+		<action name="user_*" class="cn.yjh.web.action.UserAction"
+			method="{1}">
+			<result name="login">/loginSuccess.jsp</result>
+			<result name="error">/WEB-INF/jsps/login.jsp</result>
+			<result name="input">/WEB-INF/jsps/login.jsp</result>
+		</action>
+
+		<action name="createImageAction" class="cn.yjh.web.action.CreateImageAction">
+			<result name="success" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+	</package>
+</struts>
